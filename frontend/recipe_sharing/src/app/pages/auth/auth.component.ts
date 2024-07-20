@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -6,19 +7,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 
 @Component({
-  selector: 'app-update-recipe-form',
+  selector: 'app-auth',
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule,MatButtonModule,MatRadioModule],
-  templateUrl: './update-recipe-form.component.html',
-  styleUrl: './update-recipe-form.component.scss'
+  imports: [CommonModule,FormsModule, MatFormFieldModule, MatInputModule,MatButtonModule,MatRadioModule],
+  templateUrl: './auth.component.html',
+  styleUrl: './auth.component.scss'
 })
-export class UpdateRecipeFormComponent {
+export class AuthComponent {
+
+  isRegister: false = false;
 
   recipeItem:any={
-    title:"Pizza",
-    description:"nice food",
-    foodType:'veg',
-    image:'image'
+    title:"",
+    description:"",
+    foodType:'',
+    image:''
 
   }
 

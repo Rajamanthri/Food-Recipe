@@ -13,6 +13,7 @@ import { UpdateRecipeFormComponent } from '../update-recipe-form/update-recipe-f
   styleUrl: './recipe-card.component.scss'
 })
 export class RecipeCardComponent {
+UpdateRecipeFormComponent: any;
 
   constructor(public dialog:MatDialog){
 

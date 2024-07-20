@@ -1,0 +1,92 @@
+<div class="flex justify-center h-screen items-center overflow-hidden">
+
+    <div class="container">
+        <div class="cover" [ngClass]="{'route-active':isRegister}">
+
+            <div class="front">
+                <img src="https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg" alt="">
+
+                <div class="text">
+                    <span class="text-1">
+                        Share, Savor, and Create: Your Recipe Haven Awaits!
+                    </span>
+                    <span>Let's get connected</span>
+
+                </div>
+
+            </div>
+
+            <div class="back">
+                <img src="https://img.freepik.com/premium-photo/large-bowl-food-with-fish-vegetables_197463-2405.jpg" alt="">
+
+            </div>
+            
+        </div>
+
+        <div class="form h-full">
+
+            <div class="form-content h-full">
+                <div class="ligin-form">
+                    <h1 class="text-lg font-bold text-center pb-8">Signup</h1>
+
+                    <form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+
+                        <div class="mb-4">
+                    
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Title</mat-label>
+                                <input matInput 
+                                placeholder="title..." value=""
+                                name="title"
+                                [(ngModel)]="recipeItem.title"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                                />
+                              </mat-form-field>
+                    
+                        </div>
+                    
+                        <div class="mb-4">
+                    
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Description</mat-label>
+                                <input matInput 
+                                placeholder="Description..." value=""
+                                name="description"
+                                [(ngModel)]="recipeItem.description"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                                />
+                              </mat-form-field>
+                    
+                        </div>
+                    
+                        <div class="mb-4">
+                    
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Image</mat-label>
+                                <input matInput 
+                                placeholder="image url" value=""
+                                name="image"
+                                [(ngModel)]="recipeItem.image"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                                />
+                              </mat-form-field>
+                    
+                        </div>
+                    
+                    
+                        <div>
+                            <button mat-raised-button color="primary" type="submit">
+                                Create
+                            </button>
+                        </div>
+                    </form>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
